@@ -1,6 +1,7 @@
 from Py_DBC import ParseDBC
 import re
 from collections import Counter
+import configparser
 
 
 class selfcheck_dbc:
@@ -9,6 +10,9 @@ class selfcheck_dbc:
     """
 
     def __init__(self):
+        config = configparser.ConfigParser()
+        config.read(r'..\config.ini', encoding='utf-8')
+        self.node = config.get('Dbc_Property', 'node')
         parsedbc = ParseDBC.ParseDbc()
         parsedbc.switchs()
         self.filelist = parsedbc.dbc_filelist
@@ -20,7 +24,7 @@ class selfcheck_dbc:
             print('\033[1;31m解析获得的数据为空，自检程序退出\033[0m')
             exit()
         # 同发同收检查
-        print('\033[1;36m★ 检查IECU节点下面是否存在同发同收的报文\033[0m')
+        print('\033[1;36m★ 检查节点下面是否存在同发同收的报文\033[0m')
         for dbcname in self.dbcinfo.keys():
             msgbox = list()
             for values in self.dbcinfo[dbcname]:
@@ -33,7 +37,7 @@ class selfcheck_dbc:
             else:
                 print(dbcname + ' :  \033[32mPASS\033[0m')
         # 检查DBC是否存在相同信号
-        print('\033[1;36m★ 检查IECU节点下面是否存在相同信号\033[0m')
+        print('\033[1;36m★ 检查节点下面是否存在相同信号\033[0m')
         for dbcname, dbcinfo in self.dbcinfo.items():
             siglist = list()
             sigbox = list()
@@ -142,9 +146,9 @@ class selfcheck_dbc:
         for dbcname in self.dbcinfo.keys():
             sig_notmappedlist = list()
             for mesinfo in self.dbcinfo_rx[dbcname]:
-                if mesinfo['node'] != 'iECU':
+                if mesinfo['node'] != self.node:
                     for siglist in mesinfo['siglist']:
-                        if siglist['receiver'] != 'iECU':
+                        if siglist['receiver'] != self.node:
                             sig_notmappedlist.append(siglist['name'])
             if sig_notmappedlist:
                 print(dbcname + ' :  \033[31m' + str(sig_notmappedlist) + '\033[0m')

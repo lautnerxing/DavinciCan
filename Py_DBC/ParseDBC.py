@@ -89,7 +89,7 @@ class ParseDbc:
                         except:
                             sig['valuetype'] = 'None'
                             sig['factor'] = 0
-                            if mes["node"] == 'iECU':
+                            if mes["node"] == self.node:
                                 print('valuetype & factor \033[31mError\033[0m    '+sig['name'])
                                 Check_RE = 1
                         sig["offset"] = eval(linelist[6])
@@ -168,7 +168,7 @@ class ParseDbc:
         """
         筛选函数，用于提取出特定的dbc文件的信息和节点或发送方式的信息，以及是否打开box函数开关
         :param dbcfile: 选择特定dbc文件进行信息提取，默认为提取所有dbc文件
-        :param node: 提取出特定节点的信息，不选择默认为iECU
+        :param node: 提取出特定节点的信息
         :param sendtype: 提取出TX或是RX的msg的信息，不选择默认为所有msg
         :param box: specialbox函数开关，默认为关闭; 一个可以装msg的盒子，用于特定提取出box里面的msg
         :return:发送列表，接收列表，特定信号列表
@@ -193,14 +193,14 @@ class ParseDbc:
                     self.txlist_msginfo.append(msg_values)
                 elif self.node != msg_values['node'] and self.node != 'VECTOR__INDEPENDENT_SIG_MSG':
                     for siginfo in msg_values['siglist']:
-                        # 找到所有iecu收到的msg，但是此msg包含的信号可能没有map上
+                        # 找到所有节点收到的msg，但是此msg包含的信号可能没有map上
                         if self.node in siginfo['receiver']:
                             self.rxlist_msginfo_check.append(msg_values)
                             rxlist_msginfos.append(msg_values)
                             break
             self.dbc_dict_rx.update({dbc_name: rxlist_msginfos})
 
-            # 寻找iecu收到的msg，仅提取已经map了的
+            # 寻找节点收到的msg，仅提取已经map了的
             rxlist_msginfo = copy.deepcopy(self.rxlist_msginfo_check)
             for _ in self.rxlist_msginfo_check:
                 for rx_msg_values in rxlist_msginfo:

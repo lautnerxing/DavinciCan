@@ -18,6 +18,7 @@ import re
 import os
 import time
 from pprint import pprint
+import configparser
 
 
 class GenModule(object):
@@ -77,6 +78,11 @@ class GenModule(object):
         pprint(self.txlist_msginfo)
         pprint(self.rxlist_msginfo)
 
+        # 打开并读取配置文件
+        config = configparser.ConfigParser()
+        config.read(r'..\config.ini', encoding='utf-8')
+        self.node = config.get('Dbc_Property', 'node')
+
     def creat(self):
         """
 
@@ -117,30 +123,30 @@ class GenModule(object):
                     elif bus_sigsize <= 64:
                         bus_datatype = 'sig_array'
                 if bus_datatype != 'sig_array':
-                    if bus_outorin == 'iECU':
+                    if bus_outorin == self.node:
                         insig_NRCS = self.busin_NRCS.format(signame=bus_signame, constant_ref='/DaVinci/InitValueSpec_Reserved')
                         insig_NRCS_str += insig_NRCS
-                    elif bus_outorin != 'iECU':
+                    elif bus_outorin != self.node:
                         outsig_NSCS = self.busout_NSCS.format(signame=bus_signame, constant_ref='/DaVinci/InitValueSpec_Reserved')
                         outsig_NSCS_str += outsig_NSCS
                     # Replace_Dt_signame.xml
                     Dt_signame = self.Dt_signame.format(signame=bus_signame, sigtype=bus_datatype)
                     Dt_signame_str += Dt_signame
                 elif bus_datatype == 'sig_array':
-                    if bus_outorin == 'iECU':
+                    if bus_outorin == self.node:
                         insig_NRCS = self.busin_NRCS.format(signame=bus_signame, constant_ref='/Constants/C_ARRAY_8_uint8')
                         insig_NRCS_str += insig_NRCS
-                    elif bus_outorin != 'iECU':
+                    elif bus_outorin != self.node:
                         outsig_array_NSCS = self.busout_NSCS.format(signame=bus_signame, constant_ref='/Constants/C_ARRAY_8_uint8')
                         outsig_NSCS_str += outsig_array_NSCS
                 # Replace_busin_VARIABLE-DATA-PROTOTYPE.xml & Replace_busout_VARIABLE-DATA-PROTOTYPE.xml
                 # Replace_busin_IP.xml & Replace_busout_IP.xml
-                if bus_outorin == 'iECU':
+                if bus_outorin == self.node:
                     busin_VDP = self.busin_VDP.format(signame=bus_signame)
                     busin_VDP_str += busin_VDP
                     busin_IP = self.busin_IP.format(signame=bus_signame)
                     busin_IP_str += busin_IP
-                elif bus_outorin != 'iECU':
+                elif bus_outorin != self.node:
                     busout_VDP = self.busout_VDP.format(signame=bus_signame)
                     busout_VDP_str += busout_VDP
                     busout_IP = self.busout_IP.format(signame=bus_signame)
