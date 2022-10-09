@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--PREEvision 9.0.0 final--><!--JDK: 1.8.0_172--><!--Autosar Release 4.3.0 Revision 0006--><!--Date: 2018.11.12 at 19:03:05--><AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default"/>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Communication</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataTransformation</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TRANSFORMATION-SET>
+              <SHORT-NAME>Transformer_Configuration6</SHORT-NAME>
+              <DATA-TRANSFORMATIONS>
+                <DATA-TRANSFORMATION>
+                  <SHORT-NAME>SOME_IP_Default_Transformation</SHORT-NAME>
+                  <TRANSFORMER-CHAIN-REFS>
+                    <TRANSFORMER-CHAIN-REF DEST="TRANSFORMATION-TECHNOLOGY">/Communication/DataTransformation/Transformer_Configuration6/SOME_IP_Default_Transformer</TRANSFORMER-CHAIN-REF>
+                  </TRANSFORMER-CHAIN-REFS>
+                </DATA-TRANSFORMATION>
+              </DATA-TRANSFORMATIONS>
+              <TRANSFORMATION-TECHNOLOGYS>
+                <TRANSFORMATION-TECHNOLOGY>
+                  <SHORT-NAME>SOME_IP_Default_Transformer</SHORT-NAME>
+                  <PROTOCOL>SOMEIP</PROTOCOL>
+                  <TRANSFORMATION-DESCRIPTIONS>
+                    <SOMEIP-TRANSFORMATION-DESCRIPTION>
+                      <BYTE-ORDER>OPAQUE</BYTE-ORDER>
+                      <INTERFACE-VERSION>1</INTERFACE-VERSION>
+                    </SOMEIP-TRANSFORMATION-DESCRIPTION>
+                  </TRANSFORMATION-DESCRIPTIONS>
+                  <TRANSFORMER-CLASS>SERIALIZER</TRANSFORMER-CLASS>
+                  <VERSION>1</VERSION>
+                </TRANSFORMATION-TECHNOLOGY>
+              </TRANSFORMATION-TECHNOLOGYS>
+            </DATA-TRANSFORMATION-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>PDUs</SHORT-NAME>
+          <ELEMENTS>
+Replace_PDUs
+			<!--I_SIGNAL_I_PDU-->
+Replace_I_SIGNAL_I_PDU
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Signals</SHORT-NAME>
+          <ELEMENTS>
+			<!--I_SIGNAL-->
+Replace_I_SIGNAL
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SystemSignals</SHORT-NAME>
+          <ELEMENTS>
+            <!--SYSTEM_SIGNAL -->
+Replace_System_Signals
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <!--PACKAGE_DATATYPES-->
+FLAG_PACKAGE_DATATYPES
+    <AR-PACKAGE>
+      <SHORT-NAME>ORPHANS</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>No_Name</SHORT-NAME>
+          <ELEMENTS></ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>SoAdRoutingGroups</SHORT-NAME>
+      <ELEMENTS>
+FLAG_SOADRGRP
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <!--PACKAGE_CONSTANTS -->

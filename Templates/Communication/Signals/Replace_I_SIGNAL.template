@@ -1,0 +1,21 @@
+            <I-SIGNAL >
+              <SHORT-NAME>ComSig_{ReplaceSig}</SHORT-NAME>
+              <DATA-TRANSFORMATIONS>
+                <DATA-TRANSFORMATION-REF-CONDITIONAL>
+                  <DATA-TRANSFORMATION-REF DEST="DATA-TRANSFORMATION">/Communication/DataTransformation/Transformer_Configuration6/SOME_IP_Default_Transformation</DATA-TRANSFORMATION-REF>
+                </DATA-TRANSFORMATION-REF-CONDITIONAL>
+              </DATA-TRANSFORMATIONS>
+              <I-SIGNAL-TYPE>ARRAY</I-SIGNAL-TYPE>
+              <LENGTH>{ReplaceBit}</LENGTH>
+              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Communication/SystemSignals/ComSig_{ReplaceSig}</SYSTEM-SIGNAL-REF>
+              <TRANSFORMATION-I-SIGNAL-PROPSS>
+                <SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS>
+                  <SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS>
+                    <SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL>
+                      <TRANSFORMER-REF DEST="TRANSFORMATION-TECHNOLOGY">/Communication/DataTransformation/Transformer_Configuration6/SOME_IP_Default_Transformer</TRANSFORMER-REF>
+                      <MESSAGE-TYPE>REQUEST-NO-RETURN</MESSAGE-TYPE>
+                    </SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL>
+                  </SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS>
+                </SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS>
+              </TRANSFORMATION-I-SIGNAL-PROPSS>
+            </I-SIGNAL>

@@ -1,0 +1,4 @@
+                <CONSTANT-REFERENCE>
+                  <SHORT-LABEL>{signame}</SHORT-LABEL>
+				  <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/Constants/C_RECORD_{implantsigname}</CONSTANT-REF>
+                </CONSTANT-REFERENCE>

@@ -1,0 +1,24 @@
+            <I-SIGNAL-I-PDU >
+              <SHORT-NAME>IPDU_{ReplaceIPDU}</SHORT-NAME>
+              <LENGTH>{ReplaceByte}</LENGTH>
+              <I-PDU-TIMING-SPECIFICATIONS>
+                <I-PDU-TIMING>
+                  <TRANSMISSION-MODE-DECLARATION>
+                    <TRANSMISSION-MODE-TRUE-TIMING>
+                      <EVENT-CONTROLLED-TIMING>
+                        <NUMBER-OF-REPETITIONS>0</NUMBER-OF-REPETITIONS>
+                      </EVENT-CONTROLLED-TIMING>
+                    </TRANSMISSION-MODE-TRUE-TIMING>
+                  </TRANSMISSION-MODE-DECLARATION>
+                </I-PDU-TIMING>
+              </I-PDU-TIMING-SPECIFICATIONS>
+              <I-SIGNAL-TO-PDU-MAPPINGS>
+                <I-SIGNAL-TO-I-PDU-MAPPING >
+                  <SHORT-NAME>ComSig_{ReplaceSig}</SHORT-NAME>
+                  <I-SIGNAL-REF DEST="I-SIGNAL">/Communication/Signals/ComSig_{ReplaceSig}</I-SIGNAL-REF>
+                  <PACKING-BYTE-ORDER>OPAQUE</PACKING-BYTE-ORDER>
+                  <START-POSITION>0</START-POSITION>
+                  <TRANSFER-PROPERTY>TRIGGERED</TRANSFER-PROPERTY>
+                </I-SIGNAL-TO-I-PDU-MAPPING>
+              </I-SIGNAL-TO-PDU-MAPPINGS>
+            </I-SIGNAL-I-PDU>

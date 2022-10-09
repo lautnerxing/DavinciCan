@@ -1,0 +1,5 @@
+                <TIMING-EVENT UUID="6D7CFAB5-7407-4AAB-A31D-E286A14A0FDB">
+                  <SHORT-NAME>TMT_R{modlename}_{cycle_time}</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/{modlename}/{modlename}_InternalBehavior/R{modlename}_{cycle_time}</START-ON-EVENT-REF>
+                  <PERIOD>{cycle_time_s}</PERIOD>
+                </TIMING-EVENT>

@@ -1,0 +1,15 @@
+        <SWC-IMPLEMENTATION UUID="76206AFC-521F-40D7-812F-F6BB1E0D6F8A">
+          <SHORT-NAME>{swcname}_Implementation</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE>
+              <SHORT-NAME>Default</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>Default</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/{swcname}/{swcname}_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>

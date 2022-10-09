@@ -1,0 +1,25 @@
+    <AR-PACKAGE>
+      <SHORT-NAME>System</SHORT-NAME>
+      <ELEMENTS>
+        <SYSTEM UUID="39A75CF3-8158-48A9-81E2-4A705FD41DEB">
+          <SHORT-NAME>System</SHORT-NAME>
+          <CATEGORY>SYSTEM_EXTRACT</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV_SDG:ECUProject">
+                <SDG-CAPTION>
+                  <SHORT-NAME>ECUProject_DSystemDSystem</SHORT-NAME>
+                </SDG-CAPTION>
+                <SD GID="ShortName">System</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <ROOT-SOFTWARE-COMPOSITIONS>
+            <ROOT-SW-COMPOSITION-PROTOTYPE UUID="25446477-FA77-48DD-AB22-0C43637D377C">
+              <SHORT-NAME>ApplicationHost</SHORT-NAME>
+              <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/ComponentTypes/ApplicationHost</SOFTWARE-COMPOSITION-TREF>
+            </ROOT-SW-COMPOSITION-PROTOTYPE>
+          </ROOT-SOFTWARE-COMPOSITIONS>
+        </SYSTEM>
+      </ELEMENTS>
+    </AR-PACKAGE>

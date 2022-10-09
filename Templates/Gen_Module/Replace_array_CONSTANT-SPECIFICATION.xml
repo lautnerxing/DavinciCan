@@ -1,0 +1,15 @@
+        <CONSTANT-SPECIFICATION UUID="00F9F4E7-4EA7-466F-9BBE-C8EF715C7AB8">
+          <SHORT-NAME>C_RECORD_{msgname}</SHORT-NAME>
+          <VALUE-SPEC>
+            <RECORD-VALUE-SPECIFICATION>
+              <FIELDS>
+                <ARRAY-VALUE-SPECIFICATION>
+                  <SHORT-LABEL>{signame}</SHORT-LABEL>
+                  <ELEMENTS>
+{Replace_initvalue}
+                  </ELEMENTS>
+                </ARRAY-VALUE-SPECIFICATION>
+              </FIELDS>
+            </RECORD-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>

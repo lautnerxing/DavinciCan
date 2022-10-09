@@ -1,0 +1,4 @@
+                <CONSTANT-REFERENCE>
+                  <SHORT-LABEL>{signame}</SHORT-LABEL>
+				  <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/{init_package}/{init_signame}</CONSTANT-REF>
+                </CONSTANT-REFERENCE>

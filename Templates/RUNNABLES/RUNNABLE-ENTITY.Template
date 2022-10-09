@@ -1,0 +1,12 @@
+                <RUNNABLE-ENTITY UUID="02CFD256-210F-4711-B8C3-169A82F1B21D">
+                  <SHORT-NAME>R{modlename}_{cycle_time}</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+				  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+recvalues
+				  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+sendvalues
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>R{modlename}_{cycle_time}</SYMBOL>
+                </RUNNABLE-ENTITY>

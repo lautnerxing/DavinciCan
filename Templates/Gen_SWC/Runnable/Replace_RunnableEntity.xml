@@ -1,0 +1,12 @@
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>{swcname}_{runnabletime}</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+{Repalce_VariableAccess_rec}
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+{Repalce_VariableAccess_send}
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>R{swcname}_{runnabletime}</SYMBOL>
+                </RUNNABLE-ENTITY>

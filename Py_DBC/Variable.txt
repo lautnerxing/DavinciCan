@@ -1,0 +1,6 @@
+self.specialname = 提取的特定的dbc的信息
+dbcinfo_all = 所有dbc文件解析后的信息
+self.txlist_msginfo = 所有tx报文信息
+self.rxlist_msginfo = 所有rx报文信息
+self.rxlist_msginfo_check = 用于检查信号是否全部map上
+self.msgbox = 提取的特定的msg信息

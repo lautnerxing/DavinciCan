@@ -1,0 +1,427 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: OtherECU Tester RearECU MyECU
+
+
+BO_ 1296 msg_StartAppl_Tx_OtherECU: 8 OtherECU
+ SG_ Signal_StartAppl_TxData_OtherECU : 8|8@1+ (1,0) [0|255] ""  RearECU
+ SG_ Signal_StartAppl_TxCtrl_OtherECU : 0|8@1+ (1,0) [0|255] ""  RearECU
+
+BO_ 1297 msg_StartAppl_Rx_OtherECU: 8 RearECU
+ SG_ Signal_StartAppl_RxData_OtherECU : 8|8@1+ (1,0) [0|255] ""  OtherECU
+ SG_ Signal_StartAppl_RxCtrl_OtherECU : 0|8@1+ (1,0) [0|255] ""  OtherECU
+
+BO_ 1026 msg_nm_OtherECU: 8 OtherECU
+ SG_ NmUd_OtherECU_32bit : 32|32@1+ (1,0) [0|4294967295] ""  RearECU,MyECU
+ SG_ NmUd_OtherECU_16bit : 16|16@1+ (1,0) [0|65535] ""  RearECU,MyECU
+ SG_ Nm_OtherECU_SNI : 8|8@1+ (1,0) [0|255] ""  RearECU,MyECU
+ SG_ Nm_OtherECU_CBV : 0|8@1+ (1,0) [0|255] ""  RearECU,MyECU
+
+BO_ 1574 msg_diag_Uudt_Response_OtherECU: 8 OtherECU
+ SG_ Signal_DiagPeriodicResp_OtherECU : 0|64@1+ (1,0) [0|0] ""  Tester
+
+BO_ 1570 msg_diag_Response_OtherECU: 8 OtherECU
+ SG_ Signal_DiagResponse_OtherECU : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  Tester
+
+BO_ 1568 msg_diag_Request_OtherECU: 8 Tester
+ SG_ Signal_DiagRequest_OtherECU : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  OtherECU
+
+BO_ 1798 msg_XCP_Response_OtherECU: 8 OtherECU
+ SG_ Signal_XCP_Response_OtherECU : 0|64@1+ (1,0) [0|1.844674407371E+019] ""  Tester
+
+BO_ 1797 msg_XCP_Request_OtherECU: 8 Tester
+ SG_ Signal_XCP_Request_OtherECU : 0|64@1+ (1,0) [0|1.844674407371E+019] ""  OtherECU
+
+BO_ 1281 msg_StartAppl_Rx_MyECU: 8 RearECU
+ SG_ Signal_StartAppl_RxData_MyECU : 8|8@1+ (1,0) [0|255] ""  MyECU
+ SG_ Signal_StartAppl_RxCtrl_MyECU : 0|8@1+ (1,0) [0|255] ""  MyECU
+
+BO_ 1280 msg_StartAppl_Tx_MyECU: 8 MyECU
+ SG_ Signal_StartAppl_TxData_MyECU : 8|8@1+ (1,0) [0|255] ""  RearECU
+ SG_ Signal_StartAppl_TxCtrl_MyECU : 0|8@1+ (1,0) [0|255] ""  RearECU
+
+BO_ 888 msg_TxCycle_E2eProf1C_500_30: 8 MyECU
+ SG_ SigTx_Prof1C_SQ : 8|4@1+ (1,0) [0|15] ""  RearECU
+ SG_ SigTx_Prof1C_Sig8Bit : 48|8@1+ (1,0) [0|255] ""  RearECU
+ SG_ SigTx_Prof1C_Sig4Bit : 16|4@1+ (1,0) [0|15] ""  RearECU
+ SG_ SigTx_Prof1C_Sig2Bit : 30|2@1+ (1,0) [0|3] ""  RearECU
+ SG_ SigTx_Prof1C_Sig16Bit : 32|16@1+ (1,0) [0|65535] ""  RearECU
+ SG_ SigTx_Prof1C_DataId_HiByte_LoNib : 12|4@1+ (1,0) [0|15] ""  RearECU
+ SG_ SigTx_Prof1C_CRC : 0|8@1+ (1,0) [0|255] ""  RearECU
+
+BO_ 288 msg_RxCycle_E2eProf1C_500_10: 8 RearECU
+ SG_ SigRx_Prof1C_SQ : 8|4@1+ (1,0) [0|15] ""  MyECU
+ SG_ SigRx_Prof1C_Sig4Bit : 16|4@1+ (1,0) [0|15] ""  MyECU
+ SG_ SigRx_Prof1C_Sig3Bit : 21|3@1+ (1,0) [0|7] ""  MyECU
+ SG_ SigRx_Prof1C_Sig32Bit : 24|32@1+ (1,0) [0|4294967295] ""  MyECU
+ SG_ SigRx_Prof1C_DataId_HiByte_LoNib : 12|4@1+ (1,0) [0|15] ""  MyECU
+ SG_ SigRx_Prof1C_CRC : 0|8@1+ (1,0) [0|255] ""  MyECU
+
+BO_ 896 GlobalTimeMaster: 8 RearECU
+ SG_ GlobalTimeMaster_B7 : 56|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B6 : 48|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B5 : 40|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B4 : 32|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B3 : 24|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B2 : 16|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B1 : 8|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+ SG_ GlobalTimeMaster_B0 : 0|8@1+ (1,0) [0|0] ""  OtherECU,MyECU
+
+BO_ 1555 msg_diag_Response_MyECU_Slave3: 8 MyECU
+ SG_ Signal_DiagResponse_MyECU_Slave3 : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  Tester
+
+BO_ 1553 msg_diag_Request_MyECU_Slave3: 8 Tester
+ SG_ Signal_DiagRequest_MyECU_Slave3 : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  MyECU
+
+BO_ 360 msg_TxEvent_10: 7 MyECU
+ SG_ Signal_Tx24bit_OnWrite : 32|24@1+ (1,0) [0|16777215] ""  RearECU
+ SG_ Signal_Tx32bit_OnWrite : 0|32@1+ (1,0) [0|4294967295] ""  RearECU
+
+BO_ 784 msg_RxEvent_20: 4 RearECU
+ SG_ Signal_Rx15bit_OnWrite : 12|15@1+ (1,0) [0|32767] ""  MyECU
+ SG_ Signal_Rx11bit_OnWrite : 0|11@1+ (1,0) [0|2047] ""  MyECU
+
+BO_ 872 msg_TxCycle1000_10: 2 MyECU
+ SG_ Signal_Tx4bit_Cyclic : 10|4@1+ (1,0) [0|15] ""  RearECU
+ SG_ Signal_Tx10bit_Cyclic : 0|10@1+ (1,0) [0|1023] ""  RearECU
+
+BO_ 272 msg_RxCycle500_20: 6 RearECU
+ SG_ Signal_Rx20bit_Cyclic : 8|20@1+ (1,0) [0|1048575] ""  MyECU
+ SG_ Signal_Rx16bit_Cyclic : 32|16@1+ (1,0) [0|65535] ""  MyECU
+ SG_ Signal_Rx8bit_Cyclic : 0|8@1+ (1,0) [0|255] ""  MyECU
+
+BO_ 1796 msg_XCP_Response_MyECU: 8 MyECU
+ SG_ Signal_XCP_Response_MyECU : 0|64@1+ (1,0) [0|1.844674407371E+019] ""  Tester
+
+BO_ 1795 msg_XCP_Request_MyECU: 8 Tester
+ SG_ Signal_XCP_Request_MyECU : 0|64@1+ (1,0) [0|1.844674407371E+019] ""  MyECU
+
+BO_ 616 msg_TxCycle10_0: 7 MyECU
+ SG_ Signal_Tx24bit_Cyclic : 32|24@1+ (1,0) [0|16777215] ""  RearECU
+ SG_ Signal_Tx32bit_Cyclic : 0|32@1+ (1,0) [0|4294967295] ""  RearECU
+
+BO_ 1558 msg_diag_Uudt_Response_MyECU: 8 MyECU
+ SG_ Signal_DiagPeriodicResp_MyECU : 0|64@1+ (1,0) [0|0] ""  Tester
+
+BO_ 1025 msg_nm_RearECU: 8 RearECU
+ SG_ NmUd_RearECU_32bit : 32|32@1+ (1,0) [0|4294967295] ""  OtherECU,MyECU
+ SG_ NmUd_RearECU_16bit : 16|16@1+ (1,0) [0|65535] ""  OtherECU,MyECU
+ SG_ Nm_RearECU_SNI : 8|8@1+ (1,0) [0|255] ""  OtherECU,MyECU
+ SG_ Nm_RearECU_CBV : 0|8@1+ (1,0) [0|255] ""  OtherECU,MyECU
+
+BO_ 1024 msg_nm_MyECU: 8 MyECU
+ SG_ NmUd_MyECU_32bit : 32|32@1+ (1,0) [0|4294967295] ""  OtherECU,RearECU
+ SG_ NmUd_MyECU_16bit : 16|16@1+ (1,0) [0|65535] ""  OtherECU,RearECU
+ SG_ Nm_MyECU_SNI : 8|8@1+ (1,0) [0|255] ""  OtherECU,RearECU
+ SG_ Nm_MyECU_CBV : 0|8@1+ (1,0) [0|255] ""  OtherECU,RearECU
+
+BO_ 1554 msg_diag_Response_MyECU: 8 MyECU
+ SG_ Signal_DiagResponse_MyECU : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  Tester
+
+BO_ 1552 msg_diag_Request_MyECU: 8 Tester
+ SG_ Signal_DiagRequest_MyECU : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  MyECU
+
+BO_ 1556 msg_diag_RequestGlobal: 8 Tester
+ SG_ Signal_DiagRequestGlobal : 0|64@1+ (1,0) [0|1.8446744074E+019] ""  OtherECU,MyECU
+
+BO_ 528 msg_RxCycle100_0: 1 RearECU
+ SG_ Signal_RearInteriorLight : 0|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ Signal_RearLeftDoor : 1|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ Signal_RearRightDoor : 2|1@1+ (1,0) [0|1] ""  MyECU
+
+
+
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BO_  "DiagConnection" INT 0 65535;
+BA_DEF_ BO_  "DiagUUDTResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","NotUsed","OnChange","NotUsed","NotUsed","NotUsed","NoSigSendType";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 0 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNodeIdentifier" INT 0 255;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "no","yes";
+BA_DEF_  "NmAsrMessageCount" INT 0 256;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "no","yes";
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 0 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 65535;
+BA_DEF_  "IlTxTimeout" INT 0 65535;
+BA_DEF_ BU_  "ILUsed" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_REL_ BU_SG_REL_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_DEF_  "DBName" "CAN";
+BA_DEF_DEF_  "DiagConnection" 0;
+BA_DEF_DEF_  "DiagUUDTResponse" "No";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Manufacturer" "Vector";
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 750;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 1000;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 400;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrNode" "yes";
+BA_DEF_DEF_  "NmAsrMessageCount" 64;
+BA_DEF_DEF_  "NmAsrMessage" "no";
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 50;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 100;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 1024;
+BA_DEF_DEF_  "IlTxTimeout" 0;
+BA_DEF_DEF_  "ILUsed" "yes";
+BA_DEF_DEF_  "GenMsgILSupport" "yes";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
+BA_ "Baudrate" 500000;
+BA_ "BusType" "CAN";
+BA_ "NmType" "NmAsr";
+BA_ "Manufacturer" "Vector";
+BA_ "DBName" "CAN";
+BA_ "NmAsrNode" BU_ Tester 0;
+BA_ "NmAsrNodeIdentifier" BU_ RearECU 1;
+BA_ "GenMsgSendType" BO_ 1296 0;
+BA_ "GenMsgCycleTime" BO_ 1296 50;
+BA_ "GenMsgSendType" BO_ 1297 0;
+BA_ "GenMsgCycleTime" BO_ 1297 50;
+BA_ "GenMsgILSupport" BO_ 1026 0;
+BA_ "NmAsrMessage" BO_ 1026 1;
+BA_ "GenMsgSendType" BO_ 1026 0;
+BA_ "GenMsgCycleTime" BO_ 1026 100;
+BA_ "GenMsgILSupport" BO_ 1574 0;
+BA_ "DiagUUDTResponse" BO_ 1574 1;
+BA_ "DiagResponse" BO_ 1570 1;
+BA_ "GenMsgILSupport" BO_ 1570 0;
+BA_ "GenMsgSendType" BO_ 1570 0;
+BA_ "GenMsgCycleTime" BO_ 1570 100;
+BA_ "DiagConnection" BO_ 1570 57345;
+BA_ "DiagRequest" BO_ 1568 1;
+BA_ "GenMsgILSupport" BO_ 1568 0;
+BA_ "GenMsgSendType" BO_ 1568 0;
+BA_ "GenMsgCycleTime" BO_ 1568 100;
+BA_ "DiagConnection" BO_ 1568 57345;
+BA_ "GenMsgILSupport" BO_ 1798 0;
+BA_ "GenMsgSendType" BO_ 1798 8;
+BA_ "GenMsgILSupport" BO_ 1797 0;
+BA_ "GenMsgSendType" BO_ 1797 8;
+BA_ "GenMsgSendType" BO_ 1281 0;
+BA_ "GenMsgCycleTime" BO_ 1281 50;
+BA_ "GenMsgSendType" BO_ 1280 0;
+BA_ "GenMsgCycleTime" BO_ 1280 50;
+BA_ "GenMsgStartDelayTime" BO_ 888 30;
+BA_ "GenMsgCycleTime" BO_ 888 500;
+BA_ "GenMsgSendType" BO_ 888 0;
+BA_ "GenMsgStartDelayTime" BO_ 288 10;
+BA_ "GenMsgCycleTime" BO_ 288 500;
+BA_ "GenMsgSendType" BO_ 288 0;
+BA_ "DiagConnection" BO_ 896 0;
+BA_ "GenMsgStartDelayTime" BO_ 896 0;
+BA_ "GenMsgDelayTime" BO_ 896 0;
+BA_ "GenMsgNrOfRepetition" BO_ 896 0;
+BA_ "GenMsgCycleTimeFast" BO_ 896 0;
+BA_ "GenMsgCycleTime" BO_ 896 0;
+BA_ "GenMsgILSupport" BO_ 896 0;
+BA_ "DiagConnection" BO_ 1555 57345;
+BA_ "GenMsgCycleTime" BO_ 1555 100;
+BA_ "GenMsgSendType" BO_ 1555 0;
+BA_ "GenMsgILSupport" BO_ 1555 0;
+BA_ "DiagConnection" BO_ 1553 57345;
+BA_ "GenMsgCycleTime" BO_ 1553 100;
+BA_ "GenMsgSendType" BO_ 1553 0;
+BA_ "GenMsgILSupport" BO_ 1553 0;
+BA_ "GenMsgSendType" BO_ 360 8;
+BA_ "GenMsgStartDelayTime" BO_ 360 10;
+BA_ "GenMsgSendType" BO_ 784 8;
+BA_ "GenMsgStartDelayTime" BO_ 784 20;
+BA_ "GenMsgStartDelayTime" BO_ 872 10;
+BA_ "GenMsgSendType" BO_ 872 0;
+BA_ "GenMsgCycleTime" BO_ 872 1000;
+BA_ "GenMsgStartDelayTime" BO_ 272 20;
+BA_ "GenMsgSendType" BO_ 272 0;
+BA_ "GenMsgCycleTime" BO_ 272 500;
+BA_ "GenMsgILSupport" BO_ 1796 0;
+BA_ "GenMsgSendType" BO_ 1796 8;
+BA_ "GenMsgILSupport" BO_ 1795 0;
+BA_ "GenMsgSendType" BO_ 1795 8;
+BA_ "GenMsgCycleTime" BO_ 616 10;
+BA_ "GenMsgSendType" BO_ 616 0;
+BA_ "GenMsgILSupport" BO_ 1558 0;
+BA_ "DiagUUDTResponse" BO_ 1558 1;
+BA_ "GenMsgCycleTime" BO_ 1025 100;
+BA_ "GenMsgSendType" BO_ 1025 0;
+BA_ "NmAsrMessage" BO_ 1025 1;
+BA_ "GenMsgILSupport" BO_ 1025 0;
+BA_ "GenMsgCycleTime" BO_ 1024 100;
+BA_ "GenMsgSendType" BO_ 1024 0;
+BA_ "NmAsrMessage" BO_ 1024 1;
+BA_ "GenMsgILSupport" BO_ 1024 0;
+BA_ "GenMsgCycleTime" BO_ 1554 100;
+BA_ "GenMsgSendType" BO_ 1554 0;
+BA_ "GenMsgILSupport" BO_ 1554 0;
+BA_ "DiagResponse" BO_ 1554 1;
+BA_ "DiagConnection" BO_ 1554 57345;
+BA_ "GenMsgCycleTime" BO_ 1552 100;
+BA_ "GenMsgSendType" BO_ 1552 0;
+BA_ "GenMsgILSupport" BO_ 1552 0;
+BA_ "DiagRequest" BO_ 1552 1;
+BA_ "DiagConnection" BO_ 1552 57345;
+BA_ "GenMsgCycleTime" BO_ 1556 100;
+BA_ "GenMsgSendType" BO_ 1556 0;
+BA_ "GenMsgILSupport" BO_ 1556 0;
+BA_ "DiagState" BO_ 1556 1;
+BA_ "DiagConnection" BO_ 1556 57344;
+BA_ "GenMsgCycleTime" BO_ 528 100;
+BA_ "GenMsgSendType" BO_ 528 0;
+BA_ "GenSigSendType" SG_ 1026 NmUd_OtherECU_32bit 0;
+BA_ "GenSigCycleTime" SG_ 1026 NmUd_OtherECU_32bit 100;
+BA_ "GenSigCycleTimeActive" SG_ 1026 NmUd_OtherECU_32bit 100;
+BA_ "GenSigSendType" SG_ 1026 NmUd_OtherECU_16bit 0;
+BA_ "GenSigCycleTime" SG_ 1026 NmUd_OtherECU_16bit 100;
+BA_ "GenSigCycleTimeActive" SG_ 1026 NmUd_OtherECU_16bit 100;
+BA_ "GenSigSendType" SG_ 1026 Nm_OtherECU_SNI 0;
+BA_ "GenSigCycleTime" SG_ 1026 Nm_OtherECU_SNI 100;
+BA_ "GenSigCycleTimeActive" SG_ 1026 Nm_OtherECU_SNI 100;
+BA_ "GenSigSendType" SG_ 1026 Nm_OtherECU_CBV 0;
+BA_ "GenSigCycleTime" SG_ 1026 Nm_OtherECU_CBV 100;
+BA_ "GenSigCycleTimeActive" SG_ 1026 Nm_OtherECU_CBV 100;
+BA_ "GenSigSendType" SG_ 1574 Signal_DiagPeriodicResp_OtherECU 7;
+BA_ "GenSigSendType" SG_ 1570 Signal_DiagResponse_OtherECU 7;
+BA_ "GenSigCycleTime" SG_ 1570 Signal_DiagResponse_OtherECU 0;
+BA_ "GenSigCycleTimeActive" SG_ 1570 Signal_DiagResponse_OtherECU 0;
+BA_ "GenSigSendType" SG_ 1568 Signal_DiagRequest_OtherECU 7;
+BA_ "GenSigCycleTime" SG_ 1568 Signal_DiagRequest_OtherECU 0;
+BA_ "GenSigCycleTimeActive" SG_ 1568 Signal_DiagRequest_OtherECU 0;
+BA_ "GenSigSendType" SG_ 1798 Signal_XCP_Response_OtherECU 7;
+BA_ "GenSigSendType" SG_ 1797 Signal_XCP_Request_OtherECU 7;
+BA_ "GenSigCycleTimeActive" SG_ 1555 Signal_DiagResponse_MyECU_Slave3 0;
+BA_ "GenSigCycleTime" SG_ 1555 Signal_DiagResponse_MyECU_Slave3 0;
+BA_ "GenSigSendType" SG_ 1555 Signal_DiagResponse_MyECU_Slave3 7;
+BA_ "GenSigCycleTimeActive" SG_ 1553 Signal_DiagRequest_MyECU_Slave3 0;
+BA_ "GenSigCycleTime" SG_ 1553 Signal_DiagRequest_MyECU_Slave3 0;
+BA_ "GenSigSendType" SG_ 1553 Signal_DiagRequest_MyECU_Slave3 7;
+BA_ "GenSigStartValue" SG_ 360 Signal_Tx24bit_OnWrite 63;
+BA_ "GenSigSendType" SG_ 360 Signal_Tx24bit_OnWrite 1;
+BA_ "GenSigStartValue" SG_ 360 Signal_Tx32bit_OnWrite 31;
+BA_ "GenSigSendType" SG_ 360 Signal_Tx32bit_OnWrite 1;
+BA_ "GenSigStartValue" SG_ 784 Signal_Rx15bit_OnWrite 25;
+BA_ "GenSigSendType" SG_ 784 Signal_Rx15bit_OnWrite 1;
+BA_ "GenSigStartValue" SG_ 784 Signal_Rx11bit_OnWrite 50;
+BA_ "GenSigSendType" SG_ 784 Signal_Rx11bit_OnWrite 1;
+BA_ "GenSigCycleTime" SG_ 872 Signal_Tx4bit_Cyclic 1000;
+BA_ "GenSigCycleTime" SG_ 872 Signal_Tx10bit_Cyclic 1000;
+BA_ "GenSigStartValue" SG_ 272 Signal_Rx20bit_Cyclic 1;
+BA_ "GenSigStartValue" SG_ 272 Signal_Rx16bit_Cyclic 32768;
+BA_ "GenSigStartValue" SG_ 272 Signal_Rx8bit_Cyclic 15;
+BA_ "GenSigSendType" SG_ 1796 Signal_XCP_Response_MyECU 7;
+BA_ "GenSigSendType" SG_ 1795 Signal_XCP_Request_MyECU 7;
+BA_ "GenSigCycleTime" SG_ 616 Signal_Tx24bit_Cyclic 10;
+BA_ "GenSigCycleTime" SG_ 616 Signal_Tx32bit_Cyclic 10;
+BA_ "GenSigSendType" SG_ 1558 Signal_DiagPeriodicResp_MyECU 7;
+BA_ "GenSigSendType" SG_ 1025 NmUd_RearECU_32bit 0;
+BA_ "GenSigCycleTime" SG_ 1025 NmUd_RearECU_32bit 100;
+BA_ "GenSigCycleTimeActive" SG_ 1025 NmUd_RearECU_32bit 100;
+BA_ "GenSigSendType" SG_ 1025 NmUd_RearECU_16bit 0;
+BA_ "GenSigCycleTime" SG_ 1025 NmUd_RearECU_16bit 100;
+BA_ "GenSigCycleTimeActive" SG_ 1025 NmUd_RearECU_16bit 100;
+BA_ "GenSigSendType" SG_ 1025 Nm_RearECU_SNI 0;
+BA_ "GenSigCycleTime" SG_ 1025 Nm_RearECU_SNI 100;
+BA_ "GenSigCycleTimeActive" SG_ 1025 Nm_RearECU_SNI 100;
+BA_ "GenSigSendType" SG_ 1025 Nm_RearECU_CBV 0;
+BA_ "GenSigCycleTime" SG_ 1025 Nm_RearECU_CBV 100;
+BA_ "GenSigCycleTimeActive" SG_ 1025 Nm_RearECU_CBV 100;
+BA_ "GenSigSendType" SG_ 1024 NmUd_MyECU_32bit 0;
+BA_ "GenSigCycleTime" SG_ 1024 NmUd_MyECU_32bit 100;
+BA_ "GenSigCycleTimeActive" SG_ 1024 NmUd_MyECU_32bit 100;
+BA_ "GenSigSendType" SG_ 1024 NmUd_MyECU_16bit 0;
+BA_ "GenSigCycleTime" SG_ 1024 NmUd_MyECU_16bit 100;
+BA_ "GenSigCycleTimeActive" SG_ 1024 NmUd_MyECU_16bit 100;
+BA_ "GenSigSendType" SG_ 1024 Nm_MyECU_SNI 0;
+BA_ "GenSigCycleTime" SG_ 1024 Nm_MyECU_SNI 100;
+BA_ "GenSigCycleTimeActive" SG_ 1024 Nm_MyECU_SNI 100;
+BA_ "GenSigCycleTimeActive" SG_ 1024 Nm_MyECU_CBV 100;
+BA_ "GenSigCycleTime" SG_ 1024 Nm_MyECU_CBV 100;
+BA_ "GenSigSendType" SG_ 1024 Nm_MyECU_CBV 0;
+BA_ "GenSigCycleTimeActive" SG_ 1554 Signal_DiagResponse_MyECU 0;
+BA_ "GenSigCycleTime" SG_ 1554 Signal_DiagResponse_MyECU 0;
+BA_ "GenSigSendType" SG_ 1554 Signal_DiagResponse_MyECU 7;
+BA_ "GenSigCycleTimeActive" SG_ 1552 Signal_DiagRequest_MyECU 0;
+BA_ "GenSigCycleTime" SG_ 1552 Signal_DiagRequest_MyECU 0;
+BA_ "GenSigSendType" SG_ 1552 Signal_DiagRequest_MyECU 7;
+BA_ "GenSigCycleTimeActive" SG_ 1556 Signal_DiagRequestGlobal 0;
+BA_ "GenSigCycleTime" SG_ 1556 Signal_DiagRequestGlobal 0;
+BA_ "GenSigSendType" SG_ 1556 Signal_DiagRequestGlobal 7;
+BA_ "GenSigCycleTimeActive" SG_ 528 Signal_RearInteriorLight 100;
+BA_ "GenSigCycleTime" SG_ 528 Signal_RearInteriorLight 100;
+BA_ "GenSigSendType" SG_ 528 Signal_RearInteriorLight 0;
+BA_ "GenSigCycleTimeActive" SG_ 528 Signal_RearLeftDoor 100;
+BA_ "GenSigCycleTime" SG_ 528 Signal_RearLeftDoor 100;
+BA_ "GenSigSendType" SG_ 528 Signal_RearLeftDoor 0;
+BA_ "GenSigCycleTimeActive" SG_ 528 Signal_RearRightDoor 100;
+BA_ "GenSigCycleTime" SG_ 528 Signal_RearRightDoor 100;
+BA_ "GenSigSendType" SG_ 528 Signal_RearRightDoor 0;
+SIG_GROUP_ 888 SgTx_Prof1C_TxCycle 1 : SigTx_Prof1C_CRC SigTx_Prof1C_Sig8Bit SigTx_Prof1C_Sig16Bit SigTx_Prof1C_Sig2Bit SigTx_Prof1C_Sig4Bit SigTx_Prof1C_DataId_HiByte_LoNib SigTx_Prof1C_SQ;
+SIG_GROUP_ 288 RgRx_Prof1C_RxCycle 1 : SigRx_Prof1C_Sig32Bit SigRx_Prof1C_Sig3Bit SigRx_Prof1C_Sig4Bit SigRx_Prof1C_DataId_HiByte_LoNib SigRx_Prof1C_SQ SigRx_Prof1C_CRC;
+

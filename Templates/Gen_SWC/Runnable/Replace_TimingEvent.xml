@@ -1,0 +1,5 @@
+                <TIMING-EVENT>
+                  <SHORT-NAME>TMT_{swcname}_{runnabletime}</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/{swcname}/{swcname}_InternalBehavior/{swcname}_{runnabletime}</START-ON-EVENT-REF>
+                  <PERIOD>{period}</PERIOD>
+                </TIMING-EVENT>

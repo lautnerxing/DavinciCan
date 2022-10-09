@@ -1,0 +1,12 @@
+            <VARIABLE-DATA-PROTOTYPE UUID="2BE50C9C-5BAE-4088-9A39-FCF990482B94">
+              <SHORT-NAME>{replace_signame}</SHORT-NAME>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/Dt_{replace_signame}</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>

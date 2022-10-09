@@ -1,0 +1,15 @@
+            <P-PORT-PROTOTYPE UUID="CE43AC68-A3EA-48F3-ADDF-D80ED290D9D9">
+              <SHORT-NAME>PpCom_{msgname}_{cycletime}</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiCom_{msgname}_{cycletime}/De{msgname}</DATA-ELEMENT-REF>
+                  <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                  <INIT-VALUE>
+                    <CONSTANT-REFERENCE>
+                      <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/Constants/C_RECORD_{msgname}</CONSTANT-REF>
+                    </CONSTANT-REFERENCE>
+                  </INIT-VALUE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/PiCom_{msgname}_{cycletime}</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>

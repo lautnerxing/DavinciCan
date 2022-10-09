@@ -1,0 +1,15 @@
+            <GENERAL-PURPOSE-PDU>
+              <SHORT-NAME>SdInstanceMulticastRxPdu</SHORT-NAME>
+              <CATEGORY>SD</CATEGORY>
+              <LENGTH>128</LENGTH>
+            </GENERAL-PURPOSE-PDU>
+            <GENERAL-PURPOSE-PDU>
+              <SHORT-NAME>SdInstanceTxPdu</SHORT-NAME>
+              <CATEGORY>SD</CATEGORY>
+              <LENGTH>128</LENGTH>
+            </GENERAL-PURPOSE-PDU>
+            <GENERAL-PURPOSE-PDU>
+              <SHORT-NAME>SdInstanceUnicastRxPdu</SHORT-NAME>
+              <CATEGORY>SD</CATEGORY>
+              <LENGTH>128</LENGTH>
+            </GENERAL-PURPOSE-PDU>

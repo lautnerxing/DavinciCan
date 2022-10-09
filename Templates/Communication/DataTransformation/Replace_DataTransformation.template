@@ -1,0 +1,25 @@
+            <DATA-TRANSFORMATION-SET>
+              <SHORT-NAME>Transformer_Configuration6</SHORT-NAME>
+              <DATA-TRANSFORMATIONS>
+                <DATA-TRANSFORMATION>
+                  <SHORT-NAME>SOME_IP_Default_Transformation</SHORT-NAME>
+                  <TRANSFORMER-CHAIN-REFS>
+                    <TRANSFORMER-CHAIN-REF DEST="TRANSFORMATION-TECHNOLOGY">/Communication/DataTransformation/Transformer_Configuration6/SOME_IP_Default_Transformer</TRANSFORMER-CHAIN-REF>
+                  </TRANSFORMER-CHAIN-REFS>
+                </DATA-TRANSFORMATION>
+              </DATA-TRANSFORMATIONS>
+              <TRANSFORMATION-TECHNOLOGYS>
+                <TRANSFORMATION-TECHNOLOGY>
+                  <SHORT-NAME>SOME_IP_Default_Transformer</SHORT-NAME>
+                  <PROTOCOL>SOMEIP</PROTOCOL>
+                  <TRANSFORMATION-DESCRIPTIONS>
+                    <SOMEIP-TRANSFORMATION-DESCRIPTION>
+                      <BYTE-ORDER>OPAQUE</BYTE-ORDER>
+                      <INTERFACE-VERSION>1</INTERFACE-VERSION>
+                    </SOMEIP-TRANSFORMATION-DESCRIPTION>
+                  </TRANSFORMATION-DESCRIPTIONS>
+                  <TRANSFORMER-CLASS>SERIALIZER</TRANSFORMER-CLASS>
+                  <VERSION>1</VERSION>
+                </TRANSFORMATION-TECHNOLOGY>
+              </TRANSFORMATION-TECHNOLOGYS>
+            </DATA-TRANSFORMATION-SET>
