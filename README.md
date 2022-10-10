@@ -1,5 +1,5 @@
 # DavinciCan
-1.Parse DBC file and get some msg info
+Parse DBC file and Generate arxml file for Vector Davinci Development software
 
 This tool is used to generate CtApCom.arxml using the DBC file released by the project.  Note: Before use, pls check the DBC and ensure that there are no errors in the DBC file; The node name in the DBC must be consistent with that in the config configuration file.
 
